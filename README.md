@@ -56,6 +56,12 @@ C# (for server-side programming)
 Database:
 Microsoft SQL Server (for storing member information and system data)
 
+ERD Diagram:
+
+![image](https://github.com/GittySinai/Hadasim/assets/165305099/6c3027fd-497d-4f56-8a01-9abf518a4c00)
+
+
+
 **Notes:**
 
 1/ This project was chellenging and gave me a great opportunity to build from scratch a client - server application.
