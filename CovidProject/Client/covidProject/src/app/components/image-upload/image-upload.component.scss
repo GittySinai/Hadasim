@@ -1,0 +1,21 @@
+.image-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .upload-label {
+    cursor: pointer;
+  }
+  
+  .image-preview {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  

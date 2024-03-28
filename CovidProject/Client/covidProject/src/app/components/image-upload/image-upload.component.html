@@ -1,0 +1,8 @@
+<div class="image-upload-container">
+    <input type="file" id="fileInput" (change)="onFileSelected($event)" class="file-input">
+    <p-button>  
+          <label for="fileInput" class="upload-label">Upload a photo</label>
+    </p-button>
+    <img *ngIf="uploadedImage" [src]="uploadedImage" alt="Uploaded Image" class="image-preview">
+  </div>
+  

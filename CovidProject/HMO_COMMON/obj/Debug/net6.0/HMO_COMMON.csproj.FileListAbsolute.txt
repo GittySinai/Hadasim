@@ -1,0 +1,15 @@
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\bin\Debug\net6.0\HMO_COMMON.deps.json
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\bin\Debug\net6.0\HMO_COMMON.dll
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\bin\Debug\net6.0\HMO_COMMON.pdb
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\obj\Debug\net6.0\HMO_COMMON.csproj.AssemblyReference.cache
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\obj\Debug\net6.0\HMO_COMMON.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\obj\Debug\net6.0\HMO_COMMON.AssemblyInfoInputs.cache
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\obj\Debug\net6.0\HMO_COMMON.AssemblyInfo.cs
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\obj\Debug\net6.0\HMO_COMMON.csproj.CoreCompileInputs.cache
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\obj\Debug\net6.0\HMO_COMMON.dll
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\obj\Debug\net6.0\refint\HMO_COMMON.dll
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\obj\Debug\net6.0\HMO_COMMON.pdb
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\obj\Debug\net6.0\ref\HMO_COMMON.dll
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\bin\Debug\net6.0\HMO_DTO.dll
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\bin\Debug\net6.0\HMO_DTO.pdb
+C:\Users\shaik\OneDrive\שולחן העבודה\CovidProject\HMO_COMMON\obj\Debug\net6.0\HMO_COMMON.csproj.CopyComplete

@@ -1,0 +1,15 @@
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\bin\Debug\net6.0\TwitterTowers.exe
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\bin\Debug\net6.0\TwitterTowers.deps.json
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\bin\Debug\net6.0\TwitterTowers.runtimeconfig.json
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\bin\Debug\net6.0\TwitterTowers.dll
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\bin\Debug\net6.0\TwitterTowers.pdb
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\obj\Debug\net6.0\TwitterTowers.csproj.AssemblyReference.cache
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\obj\Debug\net6.0\TwitterTowers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\obj\Debug\net6.0\TwitterTowers.AssemblyInfoInputs.cache
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\obj\Debug\net6.0\TwitterTowers.AssemblyInfo.cs
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\obj\Debug\net6.0\TwitterTowers.csproj.CoreCompileInputs.cache
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\obj\Debug\net6.0\TwitterTowers.dll
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\obj\Debug\net6.0\refint\TwitterTowers.dll
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\obj\Debug\net6.0\TwitterTowers.pdb
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\obj\Debug\net6.0\TwitterTowers.genruntimeconfig.cache
+C:\Users\shaik\OneDrive\שולחן העבודה\TwitterTowers\TwitterTowers\obj\Debug\net6.0\ref\TwitterTowers.dll

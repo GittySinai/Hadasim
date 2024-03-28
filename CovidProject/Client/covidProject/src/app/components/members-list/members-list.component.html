@@ -1,0 +1,89 @@
+
+<button (click)="addMember()" class="add-button">Add Member</button>
+<form *ngIf="showForm" [formGroup]="memberForm" (ngSubmit)="submitForm()" class="custom-form">
+ 
+  <div class="form-group">
+    <label for="tz">TZ (9 numbers):</label>
+    <input type="text" class="form-control" id="tz" formControlName="tz" required pattern="[0-9]{9}">
+    <div *ngIf="isFieldInvalid('tz')" class="error-message">
+      TZ must be 9 numbers.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+    <div *ngIf="isFieldInvalid('firstName')" class="error-message">
+      First Name is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
+    <div *ngIf="isFieldInvalid('lastName')" class="error-message">
+      Last Name is required.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="birthDate">Birth Date:</label>
+    <input type="date" class="form-control" id="birthDate" formControlName="birthDate" required>
+    <div *ngIf="isFieldInvalid('birthDate')" class="error-message">
+      Birth Date is required.
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="city">City:</label>
+    <input type="text" class="form-control" id="city" formControlName="city" required>
+    <div *ngIf="isFieldInvalid('city')" class="error-message">
+      City is required.
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="street">Street:</label>
+    <input type="text" class="form-control" id="street" formControlName="street" required>
+    <div *ngIf="isFieldInvalid('street')" class="error-message">
+      Street is required.
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="houseNumber">House Number:</label>
+    <input type="text" class="form-control" id="houseNumber" formControlName="houseNumber" required>
+    <div *ngIf="isFieldInvalid('houseNumber')" class="error-message">
+      House Number is required.
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" class="form-control" id="phoneNumber" formControlName="phoneNumber" required>
+    <div *ngIf="isFieldInvalid('phoneNumber')" class="error-message">
+      Phone Number is required.
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="mobile">Mobile:</label>
+    <input type="tel" class="form-control" id="mobile" formControlName="mobile" required>
+    <div *ngIf="isFieldInvalid('mobile')" class="error-message">
+      Mobile is required.
+    </div>
+  </div>
+    
+  <button type="submit" class="submit-button" [disabled]="memberForm.invalid">Submit</button>
+  <button (click)="cancel()" class="cancel-button">Cancel</button>
+
+</form>
+
+
+
+
+<div class="member-list">
+    <div *ngFor="let member of membersList" class="member-card">
+      <app-member   [member]="member"></app-member>
+
+    </div>
+  </div>
+
+  

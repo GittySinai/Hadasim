@@ -1,0 +1,202 @@
+<div class="member-details">
+
+
+    <h2>{{ member.firstName }} {{ member.lastName }}</h2>
+    <p><strong>TZ:</strong> {{ member.tz }}</p>
+    <button *ngIf="!showDetails" (click)="showMemberDetails()" class="watch-button">Watch</button>
+    <div *ngIf="showDetails">
+        <app-image-upload [member]="member"></app-image-upload>
+
+        <p><strong>Address:</strong>
+            {{ member.city }}, {{ member.street }} {{ member.houseNumber }}<br></p>
+        <p><strong>Birth Date:</strong> {{ member.birthDate | date }}</p>
+        <p><strong>Phone Number:</strong> {{ member.phoneNumber }}</p>
+        <p><strong>Mobile:</strong> {{ member.mobile }}</p>
+        <ng-container *ngIf="member.medicalEvents">
+
+
+            <div *ngFor="let event of member.medicalEvents" class="medical-event">
+
+                <p><strong>Event Name:</strong> {{ event.eventName }}</p>
+                <p><strong>Event Date:</strong> {{ event.eventDate | date }}</p>
+                <p *ngIf="event.comments"><strong>Comments:</strong> {{ event.comments }}</p>
+                <div *ngIf="event.vaccineName" class="vaccine-event">
+
+                    <p><strong>Vaccine Name:</strong> {{ event.vaccineName}}</p>
+                    <p><strong>Body Location:</strong> {{ event.bodyLocation }}</p>
+                    <p><strong>Vaccine Cost:</strong> {{ event.vaccineCost}}</p>
+
+
+                </div>
+            </div>
+        </ng-container>
+
+        <div>
+            <!-- Delete member -->
+            <p></p>
+            <button (click)="deleteMember()" class="delete-button">Delete</button>
+            <!-- Update member -->
+            <p></p>
+
+            <div>
+                <button (click)="updateMember()" class="update-button">Update Member</button>
+                <form *ngIf="showForm" [formGroup]="memberForm" (ngSubmit)="submitForm()" class="custom-form">
+
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" class="form-control" id="firstName" formControlName="firstName" required>
+                        <div *ngIf="isFieldMemberInvalid('firstName')" class="error-message">
+                            First Name is required.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" class="form-control" id="lastName" formControlName="lastName" required>
+                        <div *ngIf="isFieldMemberInvalid('lastName')" class="error-message">
+                            Last Name is required.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate">Birth Date:</label>
+                        <input type="date" class="form-control" id="birthDate" formControlName="birthDate" required>
+                        <div *ngIf="isFieldMemberInvalid('birthDate')" class="error-message">
+                            Birth Date is required.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" class="form-control" id="city" formControlName="city" required>
+                        <div *ngIf="isFieldMemberInvalid('city')" class="error-message">
+                            City is required.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="street">Street:</label>
+                        <input type="text" class="form-control" id="street" formControlName="street" required>
+                        <div *ngIf="isFieldMemberInvalid('street')" class="error-message">
+                            Street is required.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="houseNumber">House Number:</label>
+                        <input type="text" class="form-control" id="houseNumber" formControlName="houseNumber" required>
+                        <div *ngIf="isFieldMemberInvalid('houseNumber')" class="error-message">
+                            House Number is required.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" class="form-control" id="phoneNumber" formControlName="phoneNumber" required>
+                        <div *ngIf="isFieldMemberInvalid('phoneNumber')" class="error-message">
+                            Phone Number is required.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile:</label>
+                        <input type="tel" class="form-control" id="mobile" formControlName="mobile" required>
+                        <div *ngIf="isFieldMemberInvalid('mobile')" class="error-message">
+                            Mobile is required.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button" [disabled]="memberForm.invalid">Submit</button>
+                    <button (click)="cancel()" class="cancel-button">Cancel</button>
+
+                </form>
+            </div>
+
+            <p></p>
+
+            <!-- Add Event -->
+            <div><button (click)="addEvent()" class="event-button">Add Event</button>
+
+                <form *ngIf="showEventForm" [formGroup]="eventForm" (ngSubmit)="submitEventForm()" class="custom-form">
+                    <div class="form-group">
+                        <label for="eventName">Event Name:</label>
+                        <p-dropdown id="eventName" [options]="eventTypeOptions" [showClear]="true"
+                            placeholder="Select an event type" formControlName="eventName"></p-dropdown>
+                    </div>
+                    <div *ngIf="isFieldInvalid('eventName')" class="error-message">
+                        Event name is required.
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventDate">Event Date:</label>
+                        <input type="date" class="form-control" id="eventDate" formControlName="eventDate" required>
+                        <div *ngIf="isFieldInvalid('eventDate')" class="error-message">
+                            Event Date is required.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comments:</label>
+                        <input type="text" class="form-control" id="comments" formControlName="comments">
+                    </div>
+
+                    <button type="submit" class="submit-button"
+                        [disabled]=" eventForm.controls['eventDate'].invalid ">Submit</button>
+                    <button (click)="cancelAddEvent()" class="cancel-button">Cancel</button>
+                </form>
+                <!-- </p-dialog> -->
+            </div>
+
+
+            <p></p>
+
+            <!-- Add Vaccine -->
+            <div> <button (click)="addVaccine()" class="event-button">Add Vaccine</button>
+                <p-dialog header="Header" [(visible)]="!showAddVaccin" [style]="{width: '50vw'}">
+                    <div>
+                        The number of vacciner per member is limited to 4 </div>
+                    <p-button (click)="closeDialog()"> </p-button>
+                </p-dialog>
+                <form *ngIf="showVaccineForm&&showAddVaccin" [formGroup]="vaccineForm" (ngSubmit)="submitVaccineForm()"
+                    class="custom-form">
+
+                    <div class="form-group">
+                        <label for="eventDate">Event Date:</label>
+                        <input type="date" class="form-control" id="eventDate" formControlName="eventDate" required>
+                        <div *ngIf="isFieldInvalidVaccineForm('eventDate')" class="error-message">
+                            Event Date is required.
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="vaccineName">Vaccine Name:</label>
+                        <p-dropdown id="vaccineName" [options]="vaccineTypeOptions" [showClear]="true"
+                            placeholder="Select a vaccine" formControlName="vaccineName"></p-dropdown>
+                        <div *ngIf="isFieldInvalidVaccineForm('vaccineName')" class="error-message">
+                            Vaccine name is required.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comments:</label>
+                        <input type="text" class="form-control" id="comments" formControlName="comments">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bodyLocation">Body Location:</label>
+                        <input type="text" class="form-control" id="bodyLocation" formControlName="bodyLocation">
+                        <div *ngIf="isFieldInvalidVaccineForm('bodyLocation')" class="error-message">
+                            Body Location is required.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button" [disabled]="vaccineForm.invalid">Submit</button>
+                    <button (click)="cancelAddVaccine()" class="cancel-button">Cancel</button>
+                </form>
+            </div>
+
+
+            <p></p>
+
+            <button (click)="closeMemberDetails()" class="close-button">Close</button>
+
+        </div>

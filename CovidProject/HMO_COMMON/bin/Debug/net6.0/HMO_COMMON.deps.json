@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "HMO_COMMON/1.0.0": {
+        "dependencies": {
+          "HMO_DTO": "1.0.0"
+        },
+        "runtime": {
+          "HMO_COMMON.dll": {}
+        }
+      },
+      "HMO_DTO/1.0.0": {
+        "runtime": {
+          "HMO_DTO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HMO_COMMON/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HMO_DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

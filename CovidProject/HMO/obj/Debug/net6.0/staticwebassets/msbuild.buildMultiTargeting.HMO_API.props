@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\HMO_API.props" />
+</Project>
