@@ -13,33 +13,46 @@ Member Profile Management:
 View and update member profiles with relevant information such as personal details, medical events, and vaccination records.
 
 1/ Members Management screen
+View of all existing members
 ![image](https://github.com/GittySinai/Hadasim/assets/165305099/62a70476-0db4-4c1e-a1c7-78708590685e)
 
 
 2/ Member management funcitons
+
+For each member - there is a set of functions you can use - clicking in the buttons in the bottome of the specific member view
 ![image](https://github.com/GittySinai/Hadasim/assets/165305099/5edea726-e979-4fd1-85a8-3ed54cc94a42)
 
 
 2.1/ Add a member screen
+
+To add a new member, click the "Add member" button at the top of the screen
 ![image](https://github.com/GittySinai/Hadasim/assets/165305099/b49b506b-ad41-45ea-9e06-caafe2205492)
 
 
 2.2/ Viewing a member
+
+To view full details of a memebr, click the "Watch" button
 ![image](https://github.com/GittySinai/Hadasim/assets/165305099/9ec64ba8-3a65-4bb4-8039-5bdeea95a1e8)
 
 
 2.3/ Modifing an existing member
+
+Modify member details is by clicking the "Update member" button - this will open the member view in an edit mode, when completing the changes, click "Submit" or "cancel"
 ![image](https://github.com/GittySinai/Hadasim/assets/165305099/47e2312c-ff17-4050-8938-e81f524a075b)
 
 
 2.4/ Upload member profile image - this is an initial solution (local storage - will need to be stord as a BLOB field in the DB)
+
+By clicking the "Upload image" button, you can choose an image file for a specific member and store in the system
 ![image](https://github.com/GittySinai/Hadasim/assets/165305099/41bbf0a7-c4f8-40b5-ad85-9c1732f3461e)
 
 
 3. Events Management: Schedule, cancel, and manage events of any type for the HMO members.
+   Managing events will be by cllicking the "Add event" button
 ![image](https://github.com/GittySinai/Hadasim/assets/165305099/e1d19ffb-b333-4614-8d24-264244cbfd8c)
 
-4. Vaccination Record Tracking: Track vaccination records for members, including vaccine types, and vaccination dates.
+4.  Vaccination Record Tracking: Track vaccination records for members, including vaccine types, and vaccination dates.
+    Managing vaccines for a member will be by cllicking the "Add vaccine" button
 ![image](https://github.com/GittySinai/Hadasim/assets/165305099/34a404e9-0d6f-45cd-bbb8-0b83d7bd753f)
 
 
